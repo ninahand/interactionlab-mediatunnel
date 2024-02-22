@@ -8,6 +8,7 @@ html{
 body{
     font-size: 1.6rem;
     margin: 0;
+    background-color: #2e3336;
 }
 
 .flex-container{
@@ -16,15 +17,55 @@ body{
     height: 100vh;
 }
 
-.desktop-image-left, 
-.desktop-image-right, 
-.tablet-image-left, 
-.tablet-image-right,
-.mobile-image-left, 
-.mobile-image-right{
+.desktop-video, 
+.desktop-words, 
+.tablet-video, 
+.tablet-words,
+.mobile-video, 
+.mobile-words{
     display: none;
 }
 
+.desktop-video{
+    height: 96vh;
+    padding: 1%
+}
+
+.desktop-words{
+    font-family: "elza-text", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 1%;
+    color: white;
+}
+
+.tablet-video{
+    width: 70%;
+}
+
+@media screen and (min-width: 950px){
+    .desktop-video, .desktop-words{
+        display: block;
+
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 949px){
+    .tablet-video, .tablet-words{
+        display: block;
+
+    }
+}
+@media screen and (max-width: 499px){
+    .mobile-video, .mobile-wordst{
+        display: block;
+    }
+    .flex-container{
+        flex-direction: column;
+    }
+}
+
+/*
 .desktop-image-left{
     width: 58.3%;
     height: 100%;
