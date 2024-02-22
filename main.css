@@ -6,7 +6,6 @@ html{
 }
 
 body{
-    font-size: 1.6rem;
     margin: 0;
     background-color: #2e3336;
 }
@@ -21,6 +20,8 @@ body{
 .desktop-words, 
 .tablet-video, 
 .tablet-words,
+.tablet-two-video,
+.tablet-two-words,
 .mobile-video, 
 .mobile-words{
     display: none;
@@ -31,17 +32,38 @@ body{
     padding: 1%
 }
 
-.desktop-words{
+.desktop-words, .tablet-words, .tablet-two-words, .tablet-words, .tablet-words{
     font-family: "elza-text", sans-serif;
     font-weight: 400;
     font-style: normal;
     padding: 1%;
     color: white;
+    font-size: 1rem;
+    
+}
+
+.tablet-video{
+    padding: 1%;
+}
+
+.desktop-words{
+    width: 15%;
 }
 
 .tablet-video{
     width: 70%;
 }
+
+.tablet-words{
+    width: 20%;
+
+
+}
+
+.tablet-two-video{
+   height: 100vh;
+}
+
 
 @media screen and (min-width: 950px){
     .desktop-video, .desktop-words{
@@ -50,9 +72,17 @@ body{
     }
 }
 
-@media screen and (min-width: 500px) and (max-width: 949px){
+@media screen and (min-width: 750px) and (max-width: 949px){
     .tablet-video, .tablet-words{
         display: block;
+        flex-direction: row-reverse;
+
+    }
+}
+@media screen and (min-width: 500px) and (max-width: 749px){
+    .tablet-two-video, .tablet-two-words{
+        display: block;
+        flex-direction: column;
 
     }
 }
