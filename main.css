@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'oraclebold';
+    src: url('./assets/ABCOracle-Bold-Trial.woff') format('woff');
+    src: url('./assets/ABCOracle-Bold-Trial.woff') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'oraclebook';
+    src: url('./assets/ABCOracle-Book-Trial.woff') format('woff');
+    src: url('./assets/ABCOracle-Book-Trial.woff2')  format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 html{
     margin: 0;
     font-size:10px; 
@@ -7,13 +21,22 @@ html{
 
 body{
     margin: 0;
-    background-color: #2e3336;
+}
+span{
+    color:blue;
+}
+.small{
+    font-size: 1.2rem;
+    color: #6e220b
 }
 
 .flex-container{
     display: flex;
     width: 100vw;
     height: 100vh;
+}
+h1{
+    font-family: 'oraclebold';
 }
 
 .desktop-video, 
@@ -27,53 +50,87 @@ body{
     display: none;
 }
 
-.desktop-video{
-    height: 96vh;
-    padding: 1%
+h1:hover, h2:hover,h3:hover{
+    cursor: pointer;
+    color: blue;
 }
 
-.desktop-words, .tablet-words, .tablet-two-words, .tablet-words, .mobile-words{
-    font-family: "elza-text", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+.desktop-words, .tablet-words, .tablet-two-words, .tablet-words{
+    font-family: 'oraclebook';
+    font-weight: normal;
     padding: 1%;
-    color: white;
+    margin-top: 4%;
     font-size: 1rem;
+    font-size: 1.3rem;
     
 }
-
-.tablet-video{
-    padding: 1%;
+.desktop-words, .tablet-words{
+    display: none;
 }
 
+.desktop-video{
+    width: 90vw;
+    padding: 1rem
+}
+
+.washer-video{
+    width: 100%;
+    object-fit: cover;
+}
 .desktop-words{
-    width: 15%;
+    width: 15vw;
 }
 
 .tablet-video{
-    width: 70%;
+    height: 90vh;
+    padding: 1rem;
+}
+.freethrow-video{
+    height: 100%;
+    object-fit: cover;
 }
 
 .tablet-words{
     width: 20%;
+}
 
-}
 .tablet-two-video{
-   height: 93vh;
+   height: 80vh;
 }
+.people-video{
+    height: 100%;
+    object-fit:cover;
+}
+
 .tablet-two-words{
-    width: 90%;
-    text-align: center;
+    width: 80%;
+    text-align: right;
+    margin-bottom: 4%;
+    padding-top: 3rem;
 }
 .mobile-video{
-    height:85vh;
+    width:100vw;
 }
-
+.eli-video{
+    width:100%;
+    object-fit: contain;
+}
+.mobile-words{
+    font-family: 'oraclebook';
+    font-weight: normal;
+    padding: 1%;
+    margin-top: 4%;
+    font-size: 1rem;
+    font-size: 1.1rem;
+}
 
 @media screen and (min-width: 950px){
     .desktop-video, .desktop-words{
         display: block;
 
+    }
+    .tablet-words{
+        display: none;
     }
 }
 
@@ -91,6 +148,8 @@ body{
         display: block;
     }
     .flex-container{
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
 
     }
