@@ -32,7 +32,7 @@ body{
     padding: 1%
 }
 
-.desktop-words, .tablet-words, .tablet-two-words, .tablet-words, .tablet-words{
+.desktop-words, .tablet-words, .tablet-two-words, .tablet-words, .mobile-words{
     font-family: "elza-text", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -57,11 +57,16 @@ body{
 .tablet-words{
     width: 20%;
 
-
 }
-
 .tablet-two-video{
-   height: 100vh;
+   height: 93vh;
+}
+.tablet-two-words{
+    width: 90%;
+    text-align: center;
+}
+.mobile-video{
+    height:85vh;
 }
 
 
@@ -75,19 +80,23 @@ body{
 @media screen and (min-width: 750px) and (max-width: 949px){
     .tablet-video, .tablet-words{
         display: block;
+    }
+    .flex-container{
         flex-direction: row-reverse;
-
+        justify-content: space-between;
     }
 }
 @media screen and (min-width: 500px) and (max-width: 749px){
     .tablet-two-video, .tablet-two-words{
         display: block;
+    }
+    .flex-container{
         flex-direction: column;
 
     }
 }
 @media screen and (max-width: 499px){
-    .mobile-video, .mobile-wordst{
+    .mobile-video, .mobile-words{
         display: block;
     }
     .flex-container{
